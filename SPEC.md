@@ -11,7 +11,7 @@ A quick and dirty command-line load testing tool for Model Context Protocol (MCP
 - Quick setup and execution
 
 ## Technology Stack
-- **Runtime**: .NET 8.0+
+- **Runtime**: .NET 10.0+
 - **MCP SDK**: [ModelContextProtocol C# SDK](https://github.com/modelcontextprotocol/csharp-sdk)
 - **NuGet Package**: [ModelContextProtocol 0.4.0-preview.3](https://www.nuget.org/packages/ModelContextProtocol/0.4.0-preview.3)
 - **Transport**: HTTP Streamable 

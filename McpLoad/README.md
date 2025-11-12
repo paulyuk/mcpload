@@ -76,7 +76,14 @@ dotnet run -- --url http://localhost:7071/runtime/webhooks/mcp --operation mixed
 
 ### Test Azure Function with function key and high load
 ```bash
-dotnet run -- --url https://func-api-abcdefg.azurewebsites.net/runtime/webhooks/mcp --header "x-functions-key:xxxxxxxxxxx==" --clients 100
+### Using environment variables for sensitive data (function keys)
+```bash
+# Set the function key as an environment variable
+export MCP_FUNCTION_KEY="your-function-key-here"
+
+# Use the environment variable in the command
+dotnet run -- --url https://func-api-abcdefg.azurewebsites.net/runtime/webhooks/mcp --header "x-functions-key:${MCP_FUNCTION_KEY}" --clients 10
+```
 ```
 
 ## Target Server

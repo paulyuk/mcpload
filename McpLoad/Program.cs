@@ -127,6 +127,7 @@ void PrintHelp()
     Console.WriteLine("  # Test with custom header (e.g., function key)");
     Console.WriteLine("  mcpload --url http://localhost:7071/runtime/webhooks/mcp --header \"x-functions-key:your-key-here\"");
     Console.WriteLine();
-    Console.WriteLine("  # Test Azure Function with function key and high load");
-    Console.WriteLine("  mcpload --url https://func-api-abcdefg.azurewebsites.net/runtime/webhooks/mcp --header \"x-functions-key:xxxxxxxxxxx==\" --clients 100");
+    Console.WriteLine("  # Test Azure Function with function key using environment variable");
+    Console.WriteLine("  export MCP_FUNCTION_KEY=\"your-key-here\"");
+    Console.WriteLine("  mcpload --url https://func-api-abcdefg.azurewebsites.net/runtime/webhooks/mcp --header \"x-functions-key:$MCP_FUNCTION_KEY\" --clients 100");
 }
