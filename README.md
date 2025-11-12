@@ -56,6 +56,11 @@ dotnet run -- --url http://localhost:7071/runtime/webhooks/mcp --operation mixed
 dotnet run -- --url http://localhost:7071/runtime/webhooks/mcp --tool-name save_snippet --tool-args '{"snippetname":"test","snippet":"console.log(\"hello\");"}'
 ```
 
+### Test Azure Function with Function Key and High Load
+```bash
+dotnet run -- --url https://func-api-abcdefg.azurewebsites.net/runtime/webhooks/mcp --header "x-functions-key:xxxxxxxxxxx==" --clients 100
+```
+
 ## More Information
 
 See [SPEC.md](./SPEC.md) for the complete specification.

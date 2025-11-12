@@ -74,6 +74,11 @@ dotnet run -- --url http://localhost:7071/runtime/webhooks/mcp --tool-name save_
 dotnet run -- --url http://localhost:7071/runtime/webhooks/mcp --operation mixed --clients 25 --verbose
 ```
 
+### Test Azure Function with function key and high load
+```bash
+dotnet run -- --url https://func-api-abcdefg.azurewebsites.net/runtime/webhooks/mcp --header "x-functions-key:xxxxxxxxxxx==" --clients 100
+```
+
 ## Target Server
 
 This tool was designed to test the Azure Functions MCP server:
